@@ -13,5 +13,7 @@ Why is it .toml? I'm not sure that's what ChatGPT decided. Maybe more research i
 sudo pacman -S --needed rust cargo base-devel qt6-base qt6-declarative
 git clone https://github.com/llowenthal/rust-audio-profile-toggle.git
 cd rust-audio-profile-toggle
-cargo run
+cargo build --release
+cp qml/*.qml target/release/qml # qml folder MUST be in the directory next to the executable.
+./target/release/qt_audio_profile_toggle
 ```
